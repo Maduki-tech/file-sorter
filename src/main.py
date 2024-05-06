@@ -30,6 +30,7 @@ def get_file_destination(file, file_type):
     """Get file destination"""
     image_types = ["jpg", "jpeg", "png", "gif", "svg", "bmp", "jpeg"]
     document_types = ["doc", "docx", "pdf", "txt", "xls", "xlsx", "ppt", "pptx"]
+    printer_tyes = ["stl"]
     video_types = ["mp4", "avi", "mov", "wmv", "flv", "mkv"]
     audio_types = ["mp3", "wav", "ogg", "flac", "aac"]
     compressed_types = ["zip", "rar", "tar", "gz", "7z"]
@@ -49,6 +50,8 @@ def get_file_destination(file, file_type):
         return "~/Downloads/Executables"
     elif file_type in code_types:
         return "~/Downloads/Code"
+    elif file_type in printer_tyes:
+        return "~/Downloads/3dPrinter"
     else:
         return "~/Downloads/Others"
 
